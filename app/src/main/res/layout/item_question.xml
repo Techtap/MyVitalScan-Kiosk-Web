@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_how_much_water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.8"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_question"
+                    style="@style/TextViewStyleBold"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/dp_95"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="@string/how_much_water_do_you_drink_a_day"
+                    android:textSize="@dimen/sp_20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_question_desc"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/dp_95"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="@string/keeping_your_body_hydrated"
+                    android:textSize="@dimen/sp_11" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_options"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.2"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wines_by_pairing"
+                tools:ignore="UnusedAttribute"
+                tools:listitem="@layout/item_question_option" />
+
+            <!-- <RadioGroup
+                 android:id="@+id/rg_how_much_water"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="3.2"
+                 android:gravity="center_vertical"
+                 android:orientation="vertical">
+
+                 <androidx.appcompat.widget.AppCompatRadioButton
+                     android:id="@+id/rb_less_than_1_ltr"
+                     style="@style/RadioButtonStyle"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/dp_3"
+                     android:background="@null"
+                     android:button="@drawable/rb_selector"
+                     android:checked="false"
+                     android:includeFontPadding="false"
+                     android:minWidth="0dp"
+                     android:minHeight="0dp"
+                     android:paddingHorizontal="@dimen/dp_15"
+                     android:text="@string/less_than_1_litre"
+                     android:textColor="@color/primary_text_color" />
+
+                 <androidx.appcompat.widget.AppCompatRadioButton
+                     android:id="@+id/rb_between_1_and_2_ltr"
+                     style="@style/RadioButtonStyle"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/dp_10"
+                     android:background="@null"
+                     android:button="@drawable/rb_selector"
+                     android:checked="false"
+                     android:includeFontPadding="false"
+                     android:minWidth="0dp"
+                     android:minHeight="0dp"
+                     android:paddingHorizontal="@dimen/dp_15"
+                     android:text="@string/between_1_and_2_litres"
+                     android:textColor="@color/primary_text_color" />
+
+                 <androidx.appcompat.widget.AppCompatRadioButton
+                     android:id="@+id/rb_more_than_2_ltr"
+                     style="@style/RadioButtonStyle"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/dp_10"
+                     android:background="@null"
+                     android:button="@drawable/rb_selector"
+                     android:checked="false"
+                     android:includeFontPadding="false"
+                     android:minWidth="0dp"
+                     android:minHeight="0dp"
+                     android:paddingHorizontal="@dimen/dp_15"
+                     android:text="@string/more_than_2_litres"
+                     android:textColor="@color/primary_text_color" />
+
+             </RadioGroup>-->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

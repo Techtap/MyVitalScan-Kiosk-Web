@@ -1,0 +1,276 @@
+<resources>
+    <string name="app_name">Tech Tap</string>
+
+
+    //terms and policies screen
+    <string name="privacy_policy_and_terms_and_conditions">Privacy Policy &amp; Terms \nand Conditions</string>
+
+    <string name="please_wait">Please wait…</string>
+    <string name="todo">TODO</string>
+    <string name="no_internet_connection">No internet connection, Please try again</string>
+    <string name="error_message_no_network">You are not currently connected to the internet.\n Please try again when you get online.</string>
+    <string name="retry">Retry</string>
+    <string name="permission_denied">Permission needed. Please allow in App Settings for additional functionality.</string>
+    <string name="loading">Loading…</string>
+    <string name="no_result_found">No Result Found</string>
+
+    <string name="my_vital_big_1">MyVitalScan puts your privacy first.</string>
+    <string name="my_vital_scan_para1">We are passionate about the protection of your Personal Information and Personal Health Information and committed to respecting your privacy.</string>
+    <string name="my_vital_big_2">MyVitalScan does NOT collect, use or disclose your Personal Information or Personal Health Information.</string>
+    <string name="my_vital_scan_para2">We operate in compliance with all applicable health privacy and other data privacy legislation such as PIPEDA (Personal Information Protection and Electronic Documents Act), GDPR (General Data Protection Regulation), and British Columbia’s Personal Information Protection Act.</string>
+    <string name="my_vital_big_3">We DO NOT</string>
+    <string name="store_your_data">\u2022  store your data</string>
+    <string name="take_photos">\u2022  take photos</string>
+    <string name="use_facial_recognition_or_identify_and_categorize_datasets">\u2022  use facial recognition or identify and categorize datasets</string>
+    <string name="retain_your_personal_facial_measurements">\u2022  retain your personal facial measurements</string>
+    <string name="save_images_or_video_streams_inputted_for_measurement">\u2022  save images or video streams inputted for measurement</string>
+    <string name="my_vital_scan_para3">
+        <li>store your data</li>
+        <li>take photos</li>
+        <li>use facial recognition or identify and categorize datasets</li>
+        <li>retain your personal facial measurements</li>
+        <li>save images or video streams inputted for measurement</li>
+    </string>
+    <string name="my_vital_big_4">All information entered into our mobile app is stored locally on your device.</string>
+    <string name="my_vital_scan_para4">If you want to share this information with any of your TELUS Health Apps, you will be asked for explicit authorization before any data is transferred.</string>
+    <string name="my_vital_big_5">MyVitalScan is NOT a medical or diagnostic product.</string>
+    <string name="my_vital_scan_para5">It is aimed at promoting general wellness, and may be used for informational purposes. In order to undergo any treatment of diagnosis, you should consult a medical professional.</string>
+    <string name="i_have_read">I have read and agree to MyVitalScan\'s Privacy Policy and Terms &amp; Conditions. For more information about how we protect your data, visit myvitalscan.ca/privacy.</string>
+    <string name="my_vital_scan_is_designed">MyVitalScan is designed for regular use to monitor health trends \nover time. MyVitalScan is not a medical or diagnostic product.</string>
+    <string name="continue_str">Continue</string>
+
+    <string name="please_Accept_privacy_policy_and_terms_condition">Please accept privacy policy and terms and condition</string>
+    <string name="please_accept_to_proceed">Please accept to proceed</string>
+
+    <string name="select_a_profile_that_best_describes_you">Select a profile that best\ndescribes you</string>
+    <string name="if_you_already_completed">If you’ve already completed a scan and have \na code, enter it here:</string>
+    <string name="enter_scan_id">Enter SCAN ID:</string>
+    <string name="see_results">see results</string>
+    <string name="sorry">Sorry,</string>
+    <string name="provided_scan">Provided SCAN ID is invalid \nor it has expired.</string>
+    <string name="close">Close</string>
+
+    <string name="scan_id">scan id</string>
+    <string name="your_wellness_score">Your Wellness Score</string>
+
+    <string name="scan_id_x">scan id: %s</string>
+    <string name="ready_to_begin_the_screening">Ready to begin the screening?</string>
+    <string name="this_will_take_less_than_a_minute">This will take less than a minute.</string>
+    <string name="remember_to">Remember to:</string>
+    <string name="keep_your_face_aligned_within_the_indicated_frame">Keep your face aligned within the indicated frame</string>
+    <string name="remain_as_still_as_possible">Remain as still as possible</string>
+    <string name="make_sure_your_face_is_evenly_illuminated">Make sure your face is evenly illuminated</string>
+    <string name="start">Start</string>
+    <string name="scan">Scan</string>
+    <string name="stop">Stop</string>
+    <string name="stay_2_3_ft_away">Stay 2-3 ft away from the screen and make sure your face is visible in the frame</string>
+    <string name="scanning_in_progress">Scanning in progress</string>
+    <string name="stay_still">Stay still</string>
+
+
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="normal">Normal</string>
+    <string name="low">Low</string>
+    <string name="mild">Mild</string>
+    <string name="na">N.A.</string>
+    <string name="bpm">BPM</string>
+
+    <!--<string name="your_heart_beats_around">Your heart beats around 100,000 times a day, 35 million times a year, and 2.5 billion times in an average lifetime</string>
+    <string name="you_actually_inhale_and_exhale_through_one_nostril_at_a_time">You actually inhale and exhale through one nostril at a time</string>
+    <string name="avoid_talking_or_moving">Avoid talking or moving</string>
+    <string name="high_blood_pressure">High blood pressure doesn\'t just happen to older adults. Nearly 1 in 4 adults aged 20 to 44 have high blood pressure.</string>
+    <string name="please_stay_as_still_as_possible">Please stay as still as possible.</string>
+    <string name="vital_signs_can_be_influenced_by">Vital signs can be influenced by a number of factors. It can vary based on age, time, gender, medication, or a result of the environment.</string>
+    <string name="owning_a_dog">Owning a dog (or other pet) can lower your risk of heart disease.</string>
+    <string name="high_blood_pressure1">High blood pressure usually doesn\’t have any symptoms.</string>
+    <string name="the_brain_uses">The brain uses 20% of the body\’s blood and oxygen</string>
+    <string name="squeezing_a_tennis_ball">Squeezing a tennis ball is about the same amount of force that your heart uses to pump blood through the body</string>
+    <string name="lifestyle_changes_are">Lifestyle changes are an effective way to manage health</string>
+    <string name="regular_practice_of_slow_breathing">Regular practice of slow breathing has been shown to improve cardiovascular and respiratory functions, and to decrease the effects of stress</string>-->
+
+    <string name="you_are_experiencing_rppg">You are experiencing rPPG (remote photo plethysmographic) imaging!</string>
+    <string name="your_heart_beats_around">Your heart beats around 100,000 times a day, 35 million times a year, and 2.5 billion times in an average lifetime	</string>
+    <string name="our_tech_works_for_all_skin_tones">Our tech works for all skin tones!</string>
+    <string name="you_actually_inhale_and_exhale">You actually inhale and exhale through one nostril at a time.</string>
+    <string name="stay_still_for_accurate_results">Stay still for accurate results.</string>
+    <string name="rppg_imaging_is_proven">rPPG imaging is proven to be as accurate as traditional, contact-based devices.</string>
+    <string name="not_just_old_folks">Not just old folks! Nearly 1 in 4 adults aged 20 to 44 have high blood pressure.</string>
+    <string name="stay_as_still_as_possible">Stay as still as possible.</string>
+    <string name="vital_signs_may_vary">Vital signs may vary based on age, time, gender, medication, or a result of the environment.</string>
+    <string name="owning_a_pet_can">Owning a pet can lower your risk of heart disease.</string>
+    <string name="high_blood_pressure_usually">High blood pressure usually doesn\'t have any symptoms.</string>
+    <string name="the_brain_uses">The brain uses 20% of the body\'s blood and oxygen.</string>
+    <string name="squeezing_a_tennis_ball">Squeezing a tennis ball is same amount of force as your heart pumps.</string>
+    <string name="lifestyle_changes_are">Lifestyle changes are an effective way to manage health.</string>
+    <string name="slow_breathing_improves">Slow breathing improves cardiovascular and respiratory functions, and reduces stress.</string>
+
+    <string name="scanning_in_progress_stay_still">Scanning in progress | stay still</string>
+
+
+    <string name="face_not_detected">Face not detected</string>
+    <string name="face_not_detected_msg">Please point the camera to your face and make sure you are not too far or too close.</string>
+
+    <string name="error_warning">Error/Warning</string>
+    <string name="orientation_not_supported">Unsupported orientation. Return to portrait mode</string>
+    <string name="unsupported_orientation">Unsupported Orientation</string>
+    <string name="unsupported_orientation_msg">Return to the portrait mode.</string>
+    <string name="face_to_far">Face Too far</string>
+    <string name="face_to_far_msg">Please move your face closer to the camera.</string>
+    <string name="tilted_head">Tilted Head</string>
+    <string name="tilted_head_msg">Please straighten your head.</string>
+    <string name="unenven_lighting">Unenven Lighting</string>
+    <string name="unenven_lighting_msg">Please ensure even distribution of light across your face.</string>
+
+    <string name="can_be_improved">Can be Improved</string>
+    <string name="excellent">Excellent!</string>
+    <string name="great">Great!</string>
+
+    <string name="we_care_about_privacy">We Care about Privacy \nTo protect your privacy, your data will expire in 3 hours.</string>
+    <string name="we_care_about_privacy1">We Care about Privacy</string>
+    <string name="to_protect_your_privacy_your_data">To protect your privacy, your data will expire in 3 hours.</string>
+
+    <string name="see_report">See report</string>
+    <string name="on_mobile">on mobile</string>
+    <string name="on_ic_kiosk">on IC kiosks</string>
+
+    <string name="use_x_as_scan_id_">Use %s as SCAN ID</string>
+    <string name="at_any_of_our_kiosks">at any of our kiosks.</string>
+    <string name="use_scan_id_as_x">Use %s as SCAN ID at any of our kiosks.</string>
+    <string name="delete_your_data">DELETE \nyour data</string>
+    <string name="delete_data">Delete data</string>
+    <string name="full_report_view_options">Full report view options</string>
+    <string name="view_full_report_options">View full report options</string>
+
+    <string name="delete_your_result_data">Delete your results data?</string>
+    <string name="all_your_data_will_be_erased">All your data will be erased from our \nservers, and you will not be able to \naccess your results.</string>
+    <string name="no_stay">NO, stay</string>
+    <string name="yes_delete">YES, delete</string>
+    <string name="yes_leave">YES, leave</string>
+
+    <string name="leave_the_session">Leave the session?</string>
+    <string name="to_protect_your_privacy">To protect your privacy, you will not be able to return. To access your results again, use  %s as SCAN ID at any of our kiosks within the next 3 hours</string>
+    <string name="the_shape_of_our_digital">The shape of our Digital \nHealthcare &amp; Wellness\n future just expanded.</string>
+    <string name="myVitalScan_offers_easy_integration">MyVitalScan offers easy integration into your service flow, \nradically altering our relationship to care and risk.</string>
+
+    <string name="healthcare">HEALTHCARE</string>
+    <string name="wellness">Wellness</string>
+    <string name="insurance">Insurance</string>
+
+    <string name="tab_healthcare_para1">As a global leader in Virtual Health Care, TELUS provides best-in-\nclass solutions for patients, healthcare professionals, and allied \norganizations. This includes the Collaborative Health Record (CHR), \nMyCare, EMR Virtual Visits, and Home Health Monitoring, all \ndelivered through pioneering technology and partnerships. \n</string>
+    <string name="tab_healthcare_para2">As an entirely mobile-driven solution, MyVitalScan offers a powerful \nnew tool to this portfolio. We allow patients to register health \ntrends and generate baseline data with unrivaled granularity, \nempowering both users and providers to make proactive, data-\ndriven wellness choices, while revitalizing key elements across the \ncontinuum of care:\n</string>
+    <string name="tab_healthcare_para3">Easy integration with existing TELUS solutions allows providers \nto track patient welfare using metrics previously available only \nwith additional hardware</string>
+    <string name="tab_healthcare_para4">8+ biomarkers provide accurate, actionable data to flag potential \nissues, enabling personalized preventive care to truly work at \nscale </string>
+    <string name="tab_healthcare_para5">Remote screening bolsters Digital Front Doors, increasing \ncapacity and allowing for effective trigger-based triage, reducing \nadministrative burden and wait-times for urgent care</string>
+    <string name="tab_healthcare_para6">Vital sign histories significantly fortify telehealth and eHealth \nsolutions, lowering ER and pediatric hospital visits, boosting \nhome monitoring, and connecting practitioners with remote \npatients and communities\n</string>
+    <string name="tab_healthcare_para7">At a time when efficient, accessible healthcare is a top priority for all \nCanadians, MyVitalSigns can lower administrative costs, reduce the \nburden on front-line staff, and redefine the provision of remote care.</string>
+
+
+    <string name="scan_the_qr_code">Scan the QR code and visit our website \nfor more information on how MyVitalScan \ncan enhance your business and services</string>
+
+    <string name="tab_wellness_para1">As a global leader in health and wellbeing, TELUS knows a \nhealthy workforce is vital to growth. This means giving \nemployers the solutions for personalized \nand preventive employee care, while equipping employees with tools to \nactively engage in their own wellbeing journeys.\n</string>
+    <string name="tab_wellness_para2">MyVitalScan\'s AI-powered metrics add significant value to \nexisting solutions like TELUS Health Virtual Care, enhancing \nmedical advice, prescriptions, lab-work, referrals, and bespoke \nhealthcare. \n</string>
+    <string name="tab_wellness_para3">Surveys show 77% of employees are willing to switch jobs \nfor better wellbeing support. Our employee-driven tracking \nprovides robust analytics to empower data-driven wellbeing \nmanagement to retain talent, curb absenteeism costs, and \nsupport productivity. \n</string>
+    <string name="tab_wellness_para4">Increased stress, burnout, and demand for behavioural \nhealthcare resources suggest workplace digital therapy is a \nproductive way to prevent and alleviate mental health crises. \nMyVitalScan measures stress levels with clinical accuracy, \nimproving virtual therapy, stress relief programs, and \noutcome-oriented remedial care. \n</string>
+    <string name="tab_wellness_para5">Engaging employees in wellbeing programs is challenging, and \nwith Canadians spending 4.4 hours daily on their smartphones, \nmobile-first strategies are essential to reach users where they \nare. Integration with existing solutions like TELUS Health \nWellbeing and the LifeJourney EAP can capture data from \nmore biomarkers than any other health app, including blood \npressure, without additional hardware. Our data offers detailed \ninsights and actionable data to incentivize behavioural and \nlifestyle changes.\n</string>
+
+    <string name="tab_insurance_para1">Data &amp; Analytics drives the insurance industry, and its potential \nin the health insurance sector is vast. Collaborative networks \nof wellness ecosystems that include insurers, health providers, \nand workplaces can improve process efficiency, underwriting, \ncompetitive pricing, client experiences, and more. \n</string>
+    <string name="tab_insurance_para2">MyVitalScan’s extensive dataset, usability, and ease of \nintegration with existing Claims Management Solutions offers \nadditional health metrics to further refine Health Risk \nAssessments and claim decisions. We can: \n</string>
+    <string name="tab_insurance_para3">Augment risk management with continuous, periodic data \nmonitoring for a real-time view of health-status, which can \nbe used to track trends for better predictive analysis \n</string>
+    <string name="tab_insurance_para4">Offer dynamic underwriting that incentivizes healthy \nbehaviours and lifestyle changes through premiums that are \nimmediately responsive to wellness trends \n</string>
+    <string name="tab_insurance_para5">Reduce claims frauds by corroborating claims with current and \nhistorical health data \n</string>
+    <string name="tab_insurance_para6">Refine and accelerate Straight-Through-Processing \nmodels, drastically improving their accuracy with historical \nand up-to-date data \n</string>
+    <string name="tab_insurance_para7">Enhance client experiences by expediting onboarding and \nunderwriting through a Digital Front Door \n</string>
+    <string name="tab_insurance_para8">Support the elderly age in place, making home health \nmonitoring easier than ever, and empowering them to lead \nmore independent lifestyles \n</string>
+
+
+    <string name="download">Download</string>
+    <string name="our_mobile_app">our mobile app for \nregular screening</string>
+
+    <string name="bullet">\u2022</string>
+    <string name="scan_result_not_found">Scan Result Not Found</string>
+
+    <string name="result">Result</string>
+    <string name="heart_rate">Heart Rate</string>
+
+    <string name="share_with_telus">SHARE WITH TELUS</string>
+    <string name="telus_mycare_allows_you_to_book">TELUS MyCare allows you to book virtual or in-person appointments with \nyour chosen health providers from the convenience of your phone. \nMyVitalScan tracks your health trends with unprecedented detail, and \nintegration with MyCare will allow you to upload your screening history and \nmake an appointment as soon as risk factors are detected.\n</string>
+    <string name="further_integration_with_health">Further integration with health databases like TELUS’ Collaborative \nHealth Record empowers your primary care provider \nwith new tools to help with virtual diagnoses, treatment, and continuity of care.</string>
+    <string name="the_following_is_example">The following is an example of the data that can be shared with TELUS’ many health solutions:\n</string>
+
+    <string name="myVitalScan_measured_my_vitals_for">MyVitalScan measured my vitals for : %s</string>
+    <string name="wellness_score">Wellness Score: %s </string>
+    <string name="wellness_level">Wellness Level: %s</string>
+    <string name="heart_rate1">Heart Rate: %s bpm</string>
+    <string name="breathing_rate">Breathing Rate: %s bpm</string>
+    <string name="stress_level">Stress Level: %s</string>
+    <string name="hrv_sdnn">HRV-SDNN: %s</string>
+    <string name="prq">PRQ: %s</string>
+    <string name="blood_pressure">Blood Pressure: %s mmHg</string>
+    <string name="taken">Taken: %s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="to_help_with_diagnosis">To help with diagnosis, continue to monitor your vitals to establish a baseline history which can be uploaded to your electronic health record (EHR) for review by medical professionals as it can be useful for early detection of potential health issues.</string>
+    <string name="these_results_should_be_used_as_a_guide_only">These results should be used as a guide only. Please seek a doctor\'s advice to obtain a professional diagnosis.</string>
+    <string name="please_enter_scan_id">Please enter SCAN ID</string>
+    <string name="new_version_is_available">New version is available. Please update application</string>
+
+    <!--<string name="keep_your_face_aligned_within">Keep your face aligned within the indicated frame</string>
+    <string name="make_sure_your_face_is_evenly_illuminated">Make sure your face is evenly illuminated</string>-->
+
+    <string name="app_version">App Version</string>
+    <string name="sdk_version">SDK Version</string>
+
+    <string name="measurement_confidence_level">Measurement confidence level:</string>
+
+
+    <string name="welcome_to_myvitalscan">Welcome to MyVitalScan</string>
+    <string name="this_is_a_limited_version_for_demonstration_purposes">This is a limited version for demonstration purposes. To measure all 11 vitals, use the MyVitalScan kiosk inside.</string>
+
+    <string name="questionnaire">Questionnaire</string>
+    <string name="how_much_water_do_you_drink_a_day">How much water do you drink a day?</string>
+    <string name="impact">Impact:</string>
+    <string name="keeping_your_body_hydrated">Keeping your body hydrated helps your heart pump blood more easily and allows oxygen to reach your muscles, which helps the muscles work efficiently.</string>
+    <string name="less_than_1_litre">Less than 1 litre</string>
+    <string name="between_1_and_2_litres">Between 1 and 2 litres</string>
+    <string name="more_than_2_litres">More than 2 litres</string>
+    <string name="how_often_do_you_feel_tired_or_fatigued">How often do you feel tired or fatigued?</string>
+    <string name="some_health_conditions_are_linked">Some health conditions are linked to lack of sleep such as high blood pressure, Type 2 diabetes and obesity.</string>
+    <string name="never">Never</string>
+    <string name="once_a_week">Once a week</string>
+    <string name="one_3_times_a_week">1-3 times a week</string>
+    <string name="more_than_3_times_a_week">>3 times a week</string>
+
+    <string name="rate_the_following_statement">Rate the following statement</string>
+    <string name="i_have_a_sense_of_purpose_in_my_life">\"I have a sense of purpose in my life.\"</string>
+    <string name="understanding_your_sense_of_purpose">Understanding your sense of purpose can assess mental health, as a stronger sense of purpose is associated with greater well-being and lower mental health risks.</string>
+    <string name="disagree">Disagree</string>
+    <string name="neutral">Neutral</string>
+    <string name="agree">Agree</string>
+    <string name="skip">Skip</string>
+
+    <string name="this_is_a_limited_scan_result">This is a limited scan result for demonstration purposes. Use this kiosk to measure all 11 vitals.</string>
+    <string name="invalid_code_message">Invalid code message</string>
+    <string name="user_stopped_scan">User stopped scan</string>
+
+    <string name="start_alignment">START alignment</string>
+    <string name="go_to_scan">Go to SCAN</string>
+    <string name="ready_to_scan">Ready to scan?</string>
+    <string name="lets_make_sure_the_camera_can_see_you">Let\’s make sure the camera can see you</string>
+    <string name="step_back_or_forward_until_your_face">Step back or forward until your face is visible within the outline</string>
+
+    <string name="the_scan_will_automatically_start_in_15_seconds">The scan will automatically start in 15 seconds.</string>
+    <string name="get_ready_stay_still_and_look_directly_at_the_camera">Get ready! Stay still and look directly at the camera.</string>
+    <string name="scan_starts_in">Scan starts in</string>
+    <string name="seconds">seconds</string>
+
+    <string name="straighten_your_head">Straighten your head.</string>
+    <string name="align_your_face_to_the_frame">Align your face to the frame.</string>
+    <string name="come_closer">Come closer.</string>
+    <string name="eliminate_shadow_or_glare">Eliminate shadow or glare.</string>
+    <string name="lighting_conditions_causing_interference">Lighting conditions causing interference.</string>
+
+    <string name="scan_starts_automatically_in_15_seconds">Scan starts automatically in 10 seconds.</string>
+    <string name="scan_started">Scan started</string>
+</resources>

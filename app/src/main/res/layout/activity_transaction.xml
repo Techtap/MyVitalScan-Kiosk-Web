@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lilac"
+        android:onClick="@{onClickListener}">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@drawable/bgc_transition_r"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_telus_health"
+            android:layout_width="@dimen/dp_270"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginStart="@dimen/dp_5"
+            android:src="@drawable/telus_health"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_progress_loader"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:src="@drawable/ic_profile_top"
+            app:layout_constraintEnd_toStartOf="@+id/iv_my_vital_scan"
+            app:layout_constraintStart_toEndOf="@+id/iv_telus_health"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_my_vital_scan"
+            android:layout_width="@dimen/dp_137"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:src="@drawable/my_vital_scan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_telus_health">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{onClickListener}">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_welcome"
+                    style="@style/TextViewStyleMedium"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_marginHorizontal="@dimen/dp_145"
+                    android:layout_marginTop="@dimen/dp_190"
+                    android:includeFontPadding="false"
+                    android:onClick="@{onClickListener}"
+                    android:paddingTop="@dimen/dp_10"
+                    android:text="@string/welcome_to_myvitalscan"
+                    android:textSize="@dimen/sp_32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_this_is_limited"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_marginHorizontal="@dimen/dp_145"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:includeFontPadding="false"
+                    android:onClick="@{onClickListener}"
+                    android:text="@string/this_is_a_limited_version_for_demonstration_purposes"
+                    android:textSize="@dimen/sp_32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+
+                <ImageView
+                    android:id="@+id/iv_flower"
+                    android:layout_width="@dimen/dp_355"
+                    android:layout_height="@dimen/dp_355"
+                    android:layout_marginStart="-10dp"
+                    android:onClick="@{onClickListener}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/anemone3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_welcome_r"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{onClickListener}">
+
+                <ImageView
+                    android:id="@+id/iv_flower1"
+                    android:layout_width="@dimen/dp_500"
+                    android:layout_height="@dimen/dp_500"
+                    android:layout_marginStart="-80dp"
+                    android:onClick="@{onClickListener}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/anemone5" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_welcome1"
+                    style="@style/TextViewStyleMedium"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_marginHorizontal="@dimen/dp_145"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:includeFontPadding="false"
+                    android:onClick="@{onClickListener}"
+                    android:paddingTop="@dimen/dp_10"
+                    android:text="@string/welcome_to_myvitalscan"
+                    android:textSize="@dimen/sp_32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_flower1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_this_is_limited1"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_marginHorizontal="@dimen/dp_145"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:includeFontPadding="false"
+                    android:onClick="@{onClickListener}"
+                    android:text="@string/this_is_a_limited_version_for_demonstration_purposes"
+                    android:textSize="@dimen/sp_32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_welcome1" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ViewFlipper>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

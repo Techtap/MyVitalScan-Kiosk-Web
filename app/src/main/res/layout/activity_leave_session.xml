@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_a85">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@drawable/bgc_leave_session"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_195"
+            android:background="@drawable/rc_delete_dialog_bg"
+            android:padding="@dimen/dp_1"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delete_your_result_data"
+                style="@style/TextViewStyleBold"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_80"
+                android:background="@color/purple"
+                android:gravity="center"
+                android:text="@string/leave_the_session"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_to_protect_your_privacy"
+                style="@style/TextViewStyleMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp_40"
+                android:text="@string/to_protect_your_privacy"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toEndOf="@+id/delete_your_result_data"
+                app:layout_constraintStart_toStartOf="@+id/delete_your_result_data"
+                app:layout_constraintTop_toBottomOf="@+id/delete_your_result_data" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_stay"
+                style="@style/TextViewStyleMedium"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/rc_no_bg"
+                android:onClick="@{onClickListener}"
+                android:text="@string/no_stay"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toStartOf="@+id/btn_yes_leave"
+                app:layout_constraintStart_toStartOf="@+id/lbl_to_protect_your_privacy"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_to_protect_your_privacy" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_yes_leave"
+                style="@style/TextViewStyleMedium"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/rc_yes_delete_bg"
+                android:onClick="@{onClickListener}"
+                android:text="@string/yes_leave"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_to_protect_your_privacy"
+                app:layout_constraintStart_toEndOf="@+id/btn_stay"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_to_protect_your_privacy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_play_sound"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_55"
+            android:layout_marginStart="@dimen/dp_22"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_prompt_on_white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_low_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_low_view" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_low_view"
+            android:layout_width="@dimen/dp_105"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginBottom="@dimen/dp_35"
+            android:onClick="@{onClickListener}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_low_view_white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

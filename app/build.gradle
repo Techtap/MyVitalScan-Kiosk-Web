@@ -1,0 +1,140 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.techtap'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.techtap"
+        minSdk 27
+        targetSdk 33
+        versionCode 21
+        versionName "21.0"
+
+        buildConfigField "String", "LICENCE_KEY", "\"${licence_key}\""
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("internal") {
+            applicationId "com.techtap.internalback"
+            dimension "version"
+            versionCode 21
+            versionName "21.0"
+            buildConfigField "long", "SCANNING_TIME", "" + SCANNIG_TIME_INTERNAL + ""
+            resValue "string", "app_name", "Telus - Internal"
+        }
+        create("external") {
+            applicationId "com.techtap.externalback"
+            dimension "version"
+            versionCode 21
+            versionName "21.0"
+            buildConfigField "long", "SCANNING_TIME", "" + SCANNIG_TIME_EXTERNAL + ""
+            resValue "string", "app_name", "Telus - External"
+        }
+
+    }
+
+    signingConfigs {
+        debug {
+//            storeFile file(keyStoreDebug)
+        }
+        release {
+//            storeFile file(keyStoreRelease)
+//            keyAlias keyStoreAlias
+//            keyPassword keyStorePass
+//            storePassword keyStoreAliasPass
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            signingConfig signingConfigs.debug
+
+            buildConfigField "boolean", "DEBUG", "" + true + ""
+            buildConfigField("String", "PREF_FILE", "\"" + prefFile + "\"")
+            buildConfigField("String", "PREF_APP_FILE", "\"" + prefAppFile + "\"")
+            buildConfigField "String", "BASE_URL", "\"${debugBaseUrl}\""
+        }
+
+        release {
+            signingConfig signingConfigs.release
+
+            buildConfigField "boolean", "DEBUG", "" + false + ""
+            buildConfigField("String", "PREF_FILE", "\"" + prefFile + "\"")
+            buildConfigField("String", "PREF_APP_FILE", "\"" + prefAppFile + "\"")
+            buildConfigField "String", "BASE_URL", "\"${liveBaseUrl}\""
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+//    kotlinOptions {
+//        jvmTarget = '1.8'
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+//    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/bnhsdk2.aar')
+    implementation("com.appmattus.certificatetransparency:certificatetransparency-android:1.1.1")
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+    implementation "androidx.hilt:hilt-navigation-compose:1.1.0-alpha01"
+    implementation 'androidx.activity:activity-ktx:1.7.2'
+    implementation "androidx.fragment:fragment-ktx:1.6.0"
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.okhttp3:okhttp:4.10.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
+
+    // Custom message
+    implementation 'org.aviran.cookiebar2:cookiebar2:1.1.5'
+
+    // Progressbar
+    implementation 'com.github.MackHartley:RoundedProgressBar:3.0.0'
+
+    //App Updater
+//    implementation 'com.github.javiersantos:AppUpdater:2.7'
+    implementation "com.github.SirLordPouya.AndroidAppUpdater:main:10.0.0"
+
+    // View Pager
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //keyboard view
+    implementation 'io.github.hijamoya:keyboardview:0.0.2'
+}

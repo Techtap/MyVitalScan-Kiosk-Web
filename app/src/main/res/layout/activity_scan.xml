@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lilac">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@drawable/bgc_scanning_progress1"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_telus_health"
+            android:layout_width="@dimen/dp_270"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginStart="@dimen/dp_5"
+            android:src="@drawable/telus_health"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/iv_progress_loader"
+             android:layout_width="@dimen/dp_100"
+             android:layout_height="@dimen/dp_35"
+             android:layout_marginStart="-30dp"
+             android:layout_marginTop="@dimen/dp_8"
+             android:src="@drawable/ic_scan_top"
+             app:layout_constraintEnd_toStartOf="@+id/iv_my_vital_scan"
+             app:layout_constraintStart_toEndOf="@+id/iv_telus_health"
+             app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />-->
+
+        <ImageView
+            android:id="@+id/iv_camera_dark"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/ic_camera_dark_top2"
+            app:layout_constraintEnd_toStartOf="@+id/iv_my_vital_scan"
+            app:layout_constraintStart_toEndOf="@+id/iv_telus_health"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_my_vital_scan"
+            android:layout_width="@dimen/dp_137"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:src="@drawable/my_vital_scan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_camera_dark">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_scan_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ready_to_scan"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cl_keep_your_face_aligned"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cl_keep_your_face_aligned"
+                    app:layout_constraintWidth_percent="0.34">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_ready_to_scan"
+                        style="@style/TextViewStyleBold"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:includeFontPadding="false"
+                        android:text="@string/ready_to_scan"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toTopOf="@+id/lbl_lets_make_sure"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_lets_make_sure"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_width="0dp"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:includeFontPadding="false"
+                        android:text="@string/lets_make_sure_the_camera_can_see_you"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toTopOf="@+id/lbl_step_back"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_ready_to_scan" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_step_back"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_width="0dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/step_back_or_forward_until_your_face"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_ready_to_scan" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_keep_your_face_aligned"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/cl_ready_to_scan"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_instruction1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_85"
+                        android:includeFontPadding="false"
+                        android:onClick="@{onClickListener}"
+                        android:src="@drawable/ic_instruction11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_keep_your_face1"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_width="0dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/keep_your_face_aligned_within_the_indicated_frame"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/iv_instruction1"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_instruction1" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_make_sure_your_face"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/cl_keep_your_face_aligned"
+                    app:layout_constraintStart_toEndOf="@+id/cl_keep_your_face_aligned"
+                    app:layout_constraintTop_toTopOf="@+id/cl_keep_your_face_aligned"
+                    app:layout_constraintWidth_percent="0.33">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_instruction2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_85"
+                        android:onClick="@{onClickListener}"
+                        android:src="@drawable/ic_instruction22"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_make_sure"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_width="0dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/make_sure_your_face_is_evenly_illuminated"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/iv_instruction2"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_instruction2" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_start_in"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingVertical="@dimen/dp_5"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_scan_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cl_scan_info">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_scan_start"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/scan_starts_automatically_in_15_seconds"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/lbl_get_ready"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_scan_start">
+
+                    <ProgressBar
+                        android:id="@+id/cp_start_in"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/cp_start_in"
+                        android:rotation="-90" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_remaining_time"
+                        style="@style/TextViewStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/sp_20"
+                        tools:text="0" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_get_ready"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/get_ready_stay_still_and_look_directly_at_the_camera"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_scan_progress"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_scan_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cl_scan_info">
+
+                <!--  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/lbl_scan_progress_test"
+                      style="@style/TextViewStyleBold"
+                      android:layout_width="0dp"
+                      android:layout_marginTop="@dimen/dp_10"
+                      android:gravity="end"
+                      android:textAllCaps="true"
+                      android:textSize="@dimen/sp_18"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintWidth_percent="0.2"
+                      tools:text="@string/app_name" />-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_top_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_vital_sign_scan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_vital_sign_scan"
+                    app:layout_constraintWidth_percent="0.25">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_scan_reading"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:background="@drawable/ic_bpm_circle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_scan_reading"
+                            style="@style/TextViewStyleBold"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/purple"
+                            android:textSize="@dimen/sp_30"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="000" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_scan_reading_unit"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/bpm"
+                            android:textColor="@color/purple"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_scan_reading"
+                            app:layout_constraintStart_toStartOf="@+id/tv_scan_reading"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_scan_reading" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_vital_sign_scan"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginEnd="@dimen/dp_26"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:onClick="@{onClickListener}"
+                    android:src="@drawable/ic_vs_heart_rate_theme"
+                    app:layout_constraintBottom_toTopOf="@+id/reading_progress_bar"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_scan_started"
+                    style="@style/TextViewStyleBold"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:gravity="center"
+                    android:text="@string/scan_started"
+                    android:textColor="@color/dark_green"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_vital_sign_scan"
+                    app:layout_constraintStart_toEndOf="@+id/cl_top_progress"
+                    app:layout_constraintTop_toTopOf="@+id/iv_vital_sign_scan" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vital_sign_scan_message"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:text="@string/select_a_profile_that_best_describes_you"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_vital_sign_scan"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_vital_sign_scan"
+                    app:layout_constraintStart_toEndOf="@+id/cl_top_progress"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_scan_started" />
+
+
+                <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                    android:id="@+id/reading_progress_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cl_top_progress"
+                    app:rpbBackgroundColor="#E7E7E7"
+                    app:rpbBackgroundTextColor="@color/white"
+                    app:rpbCornerRadius="0dp"
+                    app:rpbProgressColor="@color/progress_color"
+                    app:rpbProgressTextColor="@color/white"
+                    app:rpbTextPadding="12dp"
+                    app:rpbTextSize="0sp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_scan_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_40"
+            app:layout_constraintBottom_toTopOf="@+id/btn_scan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_top_info">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_scan_id"
+                style="@style/TextViewStyleBold"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:text="@string/scan_id_x"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toStartOf="@+id/cl_scan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cl_scan"
+                app:layout_constraintWidth_percent="0.25"
+                tools:text="@string/scan_id_x" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_scan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_scan_id"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5">
+                <!--android:background="@color/scan_bg_color"-->
+
+                <TextureView
+                    android:id="@+id/camera_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_camera_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/ic_face_ref8"
+                    app:layout_constraintBottom_toBottomOf="@id/camera_view"
+                    app:layout_constraintEnd_toEndOf="@+id/camera_view"
+                    app:layout_constraintStart_toStartOf="@+id/camera_view"
+                    app:layout_constraintTop_toTopOf="@+id/camera_view" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_scanning_error"
+                    style="@style/TextViewStyleRegular"
+                    android:layout_width="0dp"
+                    android:background="@color/scan_error_bg"
+                    android:padding="@dimen/dp_20"
+                    android:text="@string/stay_2_3_ft_away"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_13"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/camera_view"
+                    app:layout_constraintEnd_toEndOf="@+id/camera_view"
+                    app:layout_constraintStart_toStartOf="@+id/camera_view" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bpm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cl_scan"
+                app:layout_constraintTop_toTopOf="@+id/cl_scan"
+                app:layout_constraintWidth_percent="0.25">
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginStart="@dimen/dp_35"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_exit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_exit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_scan"
+            style="@style/ButtonStyleMedium"
+            android:layout_width="@dimen/dp_230"
+            android:layout_height="@dimen/dp_75"
+            android:background="@drawable/rc_start_bg"
+            android:onClick="@{onClickListener}"
+            android:text="@string/stop"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_exit" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_buttons"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_scan"
+            app:layout_constraintEnd_toStartOf="@+id/iv_exit"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="@+id/btn_scan">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_start_alignment"
+                style="@style/ButtonStyleMedium"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_75"
+                android:background="@drawable/rc_start_bg"
+                android:onClick="@{onClickListener}"
+                android:text="@string/start_alignment"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toStartOf="@+id/tv_button_divider"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_go_to_scan"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_button_divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_go_to_scan"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/btn_start_alignment"
+                app:layout_constraintTop_toTopOf="@+id/btn_go_to_scan"
+                app:layout_constraintWidth_percent="0.04" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_go_to_scan"
+                style="@style/ButtonStyleMedium"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_75"
+                android:background="@drawable/rc_continue_bg"
+                android:includeFontPadding="false"
+                android:onClick="@{onClickListener}"
+                android:text="@string/go_to_scan"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_button_divider"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="@dimen/dp_74"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_flower"
+            android:layout_width="@dimen/dp_355"
+            android:layout_height="@dimen/dp_355"
+            android:layout_marginStart="-10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/anemone3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_my_vital_scan"
+            style="@style/TextViewStyleMedium"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/my_vital_scan_is_designed"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintTop_toTopOf="@+id/iv_flower"
+            app:layout_constraintBottom_toTopOf="@+id/iv_play_sound"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_flower" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_play_sound"
+            android:layout_width="@dimen/dp_85"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_22"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_prompt_on"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_low_view"
+            app:layout_constraintStart_toEndOf="@+id/iv_flower"
+            app:layout_constraintTop_toTopOf="@+id/iv_low_view" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_low_view"
+            android:layout_width="@dimen/dp_105"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_35"
+            android:onClick="@{onClickListener}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_low_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

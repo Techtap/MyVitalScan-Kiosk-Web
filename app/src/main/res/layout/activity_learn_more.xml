@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lilac">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@drawable/bgc_learn_more"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_telus_health"
+            android:layout_width="@dimen/dp_270"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginStart="@dimen/dp_5"
+            android:src="@drawable/telus_health"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cl2"
+            app:layout_constraintHorizontal_weight="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_telus_health">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_the_shape_of_our_digital"
+                style="@style/TextViewStyleMedium"
+                android:includeFontPadding="false"
+                android:text="@string/the_shape_of_our_digital"
+                android:textSize="@dimen/sp_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/my_vital_scan_offers"
+                style="@style/TextViewStyleMedium"
+                android:textSize="@dimen/sp_13"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/myVitalScan_offers_easy_integration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_the_shape_of_our_digital" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_vital_scan_offers">
+
+                <RadioButton
+                    android:id="@+id/healthcare_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_weight="1"
+                    android:background="@drawable/learn_more_tabs_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/healthcare"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@drawable/tabs_color_selector"
+                    android:textSize="@dimen/sp_20" />
+
+                <RadioButton
+                    android:id="@+id/wellness_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_weight="1"
+                    android:background="@drawable/learn_more_tabs_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/wellness"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@drawable/tabs_color_selector"
+                    android:textSize="@dimen/sp_20" />
+
+                <RadioButton
+                    android:id="@+id/insurance_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_weight="1"
+                    android:background="@drawable/learn_more_tabs_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/insurance"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@drawable/tabs_color_selector"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/para"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rc_tab_parent"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/tv_my_vital_scan"
+                app:layout_constraintEnd_toEndOf="@+id/radio_group"
+                app:layout_constraintStart_toStartOf="@+id/radio_group"
+                app:layout_constraintTop_toBottomOf="@+id/radio_group"
+                app:layout_constraintVertical_chainStyle="spread_inside">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--tab healthcare-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_healthcare_para"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para1"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para1"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para2"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para2"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para1" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_healthcare_para3_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para3"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para3"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_healthcare_para3_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_healthcare_para4_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para4"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para4"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_healthcare_para4_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_healthcare_para5_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para4" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para5"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para5"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_healthcare_para5_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para4" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_healthcare_para6_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para5" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para6"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para6"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_healthcare_para6_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para5" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_healthcare_para7"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_healthcare_para7"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_healthcare_para6" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!--tab text wellness-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_wellness_para"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_wellness_para1"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_wellness_para1"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_wellness_para2"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_wellness_para2"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_wellness_para1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_wellness_para3"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_wellness_para3"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_wellness_para2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_wellness_para4"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_wellness_para4"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_wellness_para3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_wellness_para5"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_wellness_para5"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_wellness_para4" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!--tab insurance-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_insurance_para"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para1"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para1"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para2"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para2"
+                            android:textSize="13sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_insurance_para3_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para3"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para3"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_insurance_para3_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_insurance_para4_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para4"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para4"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_insurance_para4_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para3" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_insurance_para5_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para4" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para5"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para5"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_insurance_para5_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para4" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_insurance_para6_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para5" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para6"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para6"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_insurance_para6_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para5" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_insurance_para7_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para6" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para7"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para7"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_insurance_para7_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para6" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_insurance_para8_b"
+                            style="@style/TextViewStyleRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="@string/bullet"
+                            android:textSize="@dimen/sp_13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para7" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_insurance_para8"
+                            style="@style/TextViewStyleMedium"
+                            android:text="@string/tab_insurance_para8"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toEndOf="@+id/lbl_insurance_para8_b"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_insurance_para7" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_qr_mvs"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:background="@drawable/ic_qr_mvs_healthcare"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_scan_the_qr_code"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_wellness_para" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_scan_the_qr_code"
+                        style="@style/TextViewStyleMedium"
+                        android:layout_marginHorizontal="@dimen/dp_10"
+                        android:text="@string/scan_the_qr_code"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_qr_mvs"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_qr_mvs"
+                        app:layout_constraintTop_toTopOf="@+id/iv_qr_mvs" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_my_vital_scan"
+                style="@style/TextViewStyleMedium"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:gravity="center"
+                android:text="@string/my_vital_scan_is_designed"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/para" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.25"
+            app:layout_constraintStart_toEndOf="@+id/cl1"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_my_vital_scan"
+                android:layout_width="@dimen/dp_137"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_20"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/my_vitalscan_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_exit"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_190"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_exit_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_my_vital_scan" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_qr_mvs_download"
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_75"
+                android:layout_marginTop="@dimen/dp_20"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_qr_mvs_download"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_exit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_download"
+                style="@style/TextViewStyleRegular"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_17"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/download"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_qr_mvs_download" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_our_mobile_app"
+                style="@style/TextViewStyleRegular"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/our_mobile_app"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_download" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_play_sound"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginStart="-20dp"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_prompt_on_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/iv_low_view"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_low_view"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginStart="@dimen/dp_22"
+                android:layout_marginBottom="@dimen/dp_37"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_low_view_white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

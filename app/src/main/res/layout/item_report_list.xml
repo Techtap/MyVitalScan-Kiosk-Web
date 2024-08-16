@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="reading"
+            type="com.techtap.Reading" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="reportListener"
+            type="com.techtap.ReportListAdapter.ReportListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/rc_vital_list_item_bg"
+        android:onClick="@{(view) ->reportListener.onReportItemClick(reading, position)}"
+        android:paddingBottom="@dimen/dp_2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_2"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_vital_sign"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_vs_heart_rate_theme" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_vital_name"
+                style="@style/TextViewStyleMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toStartOf="@+id/tv_vital_reading"
+                app:layout_constraintStart_toEndOf="@+id/iv_vital_sign"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_vital_level"
+                style="@style/TextViewStyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toStartOf="@+id/tv_vital_reading"
+                app:layout_constraintStart_toStartOf="@+id/tv_vital_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vital_name"
+                tools:text="1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_vital_reading"
+                style="@style/TextViewStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:gravity="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textSize="@dimen/sp_32"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_vital_level"
+                app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+                app:layout_constraintStart_toEndOf="@+id/tv_vital_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_vital_name"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_confidence"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vital_reading"
+                app:layout_constraintEnd_toEndOf="@+id/tv_vital_reading"
+                app:srcCompat="@drawable/ic_con_level_default" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_13"
+                android:layout_marginEnd="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_vital_level"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_vital_name"
+                app:srcCompat="@drawable/ic_arrow_down" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_vital_details"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_10"
+            android:textSize="@dimen/sp_20"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_header"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

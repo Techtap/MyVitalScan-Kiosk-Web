@@ -1,0 +1,44 @@
+<resources>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#0096a6</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="selected_background">#ffaa3f</color>
+    <color name="default_background">#3d3d3d</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="lilac">#FDFAFF</color>
+    //bd
+    <color name="purple">#4B286D</color>
+    //t1
+    <color name="dark_lilac">#DACAE4</color>
+    // tab
+
+    <color name="primary_text_color">#4B286D</color>
+    <color name="secondary_text_color">#4B286D</color>
+
+    <color name="continue_border_color">#4B286D</color>
+    <color name="continue_filled_color">#DACAE4</color>
+
+    <color name="see_results_filled_color">#4B286D</color>
+
+    <color name="red">#DA2626</color>
+    <color name="scan_bg_color">#A2AAAF</color>
+
+    <color name="scan_error_bg">#F2233B</color>
+    <color name="progress_color">#66CC00</color>
+    <color name="scan_message_color">#F2EFF4</color>
+    <color name="colorScreenBackground">#F0F0F0</color>
+
+    <color name="purple_a85">#D94B286D</color>
+    <color name="white_tras">#CCFFFFFF</color>
+
+    <color name="level_red_color">#F2233B</color>
+    <color name="level_green_color">#66CC00</color>
+    <color name="black_tras">#66000000</color>
+    <color name="black_trans_50">#80DACAE4</color>
+    <color name="black_trans_501">#804B286D</color>
+
+    <color name="dark_green">#2B8000</color>
+
+</resources>

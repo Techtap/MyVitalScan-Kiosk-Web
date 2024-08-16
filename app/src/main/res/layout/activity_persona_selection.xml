@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lilac">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@drawable/bgc_persona_selection"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_telus_health"
+            android:layout_width="@dimen/dp_270"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginStart="@dimen/dp_5"
+            android:src="@drawable/telus_health"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_progress_loader"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:src="@drawable/ic_profile_top"
+            app:layout_constraintEnd_toStartOf="@+id/iv_my_vital_scan"
+            app:layout_constraintStart_toEndOf="@+id/iv_telus_health"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_my_vital_scan"
+            android:layout_width="@dimen/dp_137"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:src="@drawable/my_vital_scan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_select_a_profile"
+            style="@style/TextViewStyleMedium"
+            android:layout_marginTop="@dimen/dp_40"
+            android:gravity="center"
+            android:text="@string/select_a_profile_that_best_describes_you"
+            android:textSize="@dimen/sp_32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_progress_loader" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_top_image_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_45"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_select_a_profile">
+
+            <RelativeLayout
+                android:id="@+id/rl_fit_and_fine"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_160"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintEnd_toStartOf="@+id/iv_mellow_and_median"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_select_a_profile">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_fit_and_fine"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_160"
+                    android:onClick="@{onClickListener}" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_mellow_and_median"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_160"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_fit_and_fine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_fit_and_fine"
+                app:layout_constraintTop_toTopOf="@+id/iv_fit_and_fine">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_mellow_and_median"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_160"
+                    android:onClick="@{onClickListener}" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_bottom_image_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_top_image_row">
+
+            <RelativeLayout
+                android:id="@+id/rl_energetic_and_extra"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_160"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintEnd_toStartOf="@+id/iv_big_and_beautiful"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_top_image_row">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_energetic_and_extra"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_160"
+                    android:onClick="@{onClickListener}" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_big_and_beautiful"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_160"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_energetic_and_extra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_energetic_and_extra"
+                app:layout_constraintTop_toTopOf="@+id/iv_energetic_and_extra">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_big_and_beautiful"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_160"
+                    android:onClick="@{onClickListener}" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--<androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_energetic_and_extra"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:onClick="@{onClickListener}"
+            app:layout_constraintEnd_toStartOf="@+id/iv_big_and_beautiful"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_top_image_row" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_big_and_beautiful"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:layout_marginStart="@dimen/dp_30"
+            android:onClick="@{onClickListener}"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_energetic_and_extra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_energetic_and_extra"
+            app:layout_constraintTop_toTopOf="@+id/iv_energetic_and_extra" />
+-->
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginStart="@dimen/dp_35"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_exit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_exit" />
+
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="@dimen/dp_74"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_47"
+            android:layout_marginEnd="@dimen/dp_35"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_flower"
+            android:layout_width="@dimen/dp_355"
+            android:layout_height="@dimen/dp_355"
+            android:layout_marginStart="-10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/anemone3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_my_vital_scan"
+            style="@style/TextViewStyleMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:text="@string/my_vital_scan_is_designed"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toTopOf="@+id/iv_play_sound"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_flower"
+            app:layout_constraintTop_toTopOf="@+id/iv_flower" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_play_sound"
+            android:layout_width="@dimen/dp_85"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_22"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/ic_prompt_on"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_low_view"
+            app:layout_constraintStart_toEndOf="@+id/iv_flower"
+            app:layout_constraintTop_toTopOf="@+id/iv_low_view" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_low_view"
+            android:layout_width="@dimen/dp_105"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_35"
+            android:onClick="@{onClickListener}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_low_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

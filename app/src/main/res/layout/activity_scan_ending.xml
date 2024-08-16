@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:measureAllChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cr_header">
+
+        <include layout="@layout/layout_progress" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lilac">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@drawable/bgc_scan_ending"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--<androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_telus_health"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_8"
+                android:src="@drawable/telus_health"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_progress_loader"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_36"
+                android:src="@drawable/ic_result_top"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_telus_health"
+                app:layout_constraintEnd_toStartOf="@+id/iv_my_vital_scan"
+                app:layout_constraintStart_toEndOf="@+id/iv_telus_health"
+                app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_my_vital_scan"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/my_vital_scan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_telus_health"
+                android:layout_width="@dimen/dp_270"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginStart="@dimen/dp_5"
+                android:src="@drawable/telus_health"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_progress_loader"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:src="@drawable/ic_result_top"
+                app:layout_constraintEnd_toStartOf="@+id/iv_my_vital_scan"
+                app:layout_constraintStart_toEndOf="@+id/iv_telus_health"
+                app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_my_vital_scan"
+                android:layout_width="@dimen/dp_137"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:src="@drawable/my_vital_scan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_telus_health" />
+
+            <!-- <ImageView
+                 android:id="@+id/iv_play_sound"
+                 android:layout_width="@dimen/dp_80"
+                 android:layout_height="@dimen/dp_45"
+                 android:layout_marginStart="@dimen/dp_28"
+                 android:layout_marginTop="@dimen/dp_30"
+                 android:onClick="@{onClickListener}"
+                 android:src="@drawable/ic_prompt_on"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/iv_telus_health" />-->
+
+
+            <TextView
+                android:id="@+id/tv_scan_id"
+                style="@style/TextViewStyleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_60"
+                android:text="@string/scan_id"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_progress_loader" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_your_wellness_score"
+                style="@style/TextViewStyleRegular"
+                android:layout_marginTop="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/your_wellness_score"
+                android:textSize="@dimen/sp_32"
+                app:layout_constraintEnd_toEndOf="@+id/tv_scan_id"
+                app:layout_constraintStart_toStartOf="@+id/tv_scan_id"
+                app:layout_constraintTop_toBottomOf="@+id/tv_scan_id" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_wellness_score"
+                style="@style/TextViewStyleBold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/can_be_improved"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_42"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_your_wellness_score" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_we_care_about_privacy"
+                style="@style/TextViewStyleBold"
+                android:layout_marginTop="@dimen/dp_25"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/we_care_about_privacy1"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wellness_score" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_to_protect"
+                style="@style/TextViewStyleRegular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/to_protect_your_privacy_your_data"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_we_care_about_privacy" />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_full_report_view_options"
+                style="@style/TextViewStyleRegular"
+                android:layout_marginTop="@dimen/dp_30"
+                android:gravity="center"
+                android:text="@string/view_full_report_options"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_to_protect" />
+
+            <View
+                android:id="@+id/iv_line_top_left"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_100"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:background="@drawable/ic_bottom_line"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_full_report_view_options"
+                app:layout_constraintEnd_toStartOf="@+id/tv_full_report_view_options"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_full_report_view_options" />
+
+            <View
+                android:id="@+id/iv_line_top_right"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_100"
+                android:background="@drawable/ic_bottom_line"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_full_report_view_options"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_full_report_view_options"
+                app:layout_constraintTop_toTopOf="@+id/tv_full_report_view_options" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_on_mobile"
+                style="@style/TextViewStyleBold"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center"
+                android:text="@string/on_mobile"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_28"
+                app:layout_constraintEnd_toStartOf="@+id/tv_on_ic_kiosk"
+                app:layout_constraintStart_toStartOf="@+id/iv_line_top_left"
+                app:layout_constraintTop_toBottomOf="@+id/tv_full_report_view_options" />
+
+            <ImageView
+                android:id="@+id/iv_on_mobile_qr"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_marginTop="@dimen/dp_5"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_on_mobile_qr"
+                app:layout_constraintEnd_toEndOf="@+id/tv_on_mobile"
+                app:layout_constraintStart_toStartOf="@+id/tv_on_mobile"
+                app:layout_constraintTop_toBottomOf="@+id/tv_on_mobile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_on_ic_kiosk"
+                style="@style/TextViewStyleBold"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="@string/on_ic_kiosk"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_28"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_on_mobile"
+                app:layout_constraintEnd_toEndOf="@+id/iv_line_top_right"
+                app:layout_constraintStart_toEndOf="@+id/tv_on_mobile"
+                app:layout_constraintTop_toTopOf="@+id/tv_on_mobile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_use_scan_id_as"
+                style="@style/TextViewStyleRegular"
+                android:layout_width="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dp_30"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintEnd_toEndOf="@+id/tv_on_ic_kiosk"
+                app:layout_constraintStart_toStartOf="@+id/tv_on_ic_kiosk"
+                app:layout_constraintTop_toBottomOf="@+id/tv_on_ic_kiosk"
+                tools:text="@string/use_scan_id_as_x" />
+
+            <View
+                android:id="@+id/iv_line_bottom"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginHorizontal="@dimen/dp_100"
+                android:layout_marginTop="@dimen/dp_35"
+                android:background="@drawable/ic_bottom_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_on_mobile_qr" />
+
+            <!--<ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginStart="@dimen/dp_28"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_exit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_exit" />-->
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginStart="@dimen/dp_35"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_exit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_exit" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="@dimen/dp_16"
+                app:layout_constraintEnd_toStartOf="@+id/iv_exit"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                app:layout_constraintTop_toTopOf="@+id/iv_exit">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_see_report"
+                    style="@style/ButtonStyleMedium"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/rc_start_bg"
+                    android:onClick="@{onClickListener}"
+                    android:text="@string/see_report"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_delete_report"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_delete_report"
+                    android:layout_width="@dimen/dp_220"
+                    android:layout_height="@dimen/dp_80"
+                    android:background="@drawable/rc_continue_bg"
+                    android:gravity="center"
+                    android:onClick="@{onClickListener}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/btn_see_report"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_exit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/iv_exit" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_delete_data"
+                        style="@style/TextViewStyleMedium"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/delete_data"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/sp_17"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_on_mobile"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_line_top_right"
+                        app:layout_constraintStart_toEndOf="@+id/tv_on_mobile"
+                        app:layout_constraintTop_toTopOf="@+id/tv_on_mobile" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!--<androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_delete_report"
+                    style="@style/ButtonStyleMedium"
+                    android:layout_width="@dimen/dp_250"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@drawable/rc_continue_bg"
+                    android:drawableStart="@drawable/ic_delete"
+                    android:onClick="@{onClickListener}"
+                    android:text="@string/delete_data"
+                    android:textSize="@dimen/sp_17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/btn_see_report"
+                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/btn_delete_report"
+                 style="@style/ButtonStyleMedium"
+                 android:layout_width="@dimen/dp_250"
+                 android:layout_height="@dimen/dp_80"
+                 android:layout_marginTop="@dimen/dp_65"
+                 android:textSize="@dimen/sp_17"
+                 android:background="@drawable/rc_continue_bg"
+                 android:drawableStart="@drawable/ic_delete"
+                 android:onClick="@{onClickListener}"
+                 android:text="@string/delete_data"
+                 app:layout_constraintEnd_toEndOf="@+id/iv_line_bottom"
+                 app:layout_constraintStart_toStartOf="@+id/iv_line_bottom"
+                 app:layout_constraintTop_toBottomOf="@+id/iv_line_bottom" />-->
+
+            <ImageView
+                android:id="@+id/iv_exit"
+                android:layout_width="@dimen/dp_74"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_47"
+                android:layout_marginEnd="@dimen/dp_35"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_exit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+           <!-- android:layout_width="@dimen/dp_400"
+            android:layout_height="@dimen/dp_400"-->
+
+            <ImageView
+                android:id="@+id/iv_flower"
+                android:layout_width="@dimen/dp_355"
+                android:layout_height="@dimen/dp_355"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/anemone_green" />
+
+            <!--<androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_low_view"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginEnd="@dimen/dp_18"
+                android:layout_marginBottom="@dimen/dp_37"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_low_view1" />-->
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_my_vital_scan"
+                style="@style/TextViewStyleMedium"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/my_vital_scan_is_designed"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintTop_toTopOf="@+id/iv_flower"
+                app:layout_constraintBottom_toTopOf="@+id/iv_play_sound"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_flower" />
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_play_sound"
+                android:layout_width="@dimen/dp_85"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_22"
+                android:onClick="@{onClickListener}"
+                android:src="@drawable/ic_prompt_on"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_low_view"
+                app:layout_constraintStart_toEndOf="@+id/iv_flower"
+                app:layout_constraintTop_toTopOf="@+id/iv_low_view" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_low_view"
+                android:layout_width="@dimen/dp_105"
+                android:layout_height="@dimen/dp_80"
+                android:layout_marginEnd="@dimen/dp_13"
+                android:layout_marginBottom="@dimen/dp_35"
+                android:onClick="@{onClickListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_low_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/ll_no_result"
+            layout="@layout/layout_no_result_found" />
+
+        <include
+            android:id="@+id/ll_no_internet"
+            layout="@layout/layout_no_internet" />
+
+    </ViewFlipper>
+
+</layout>

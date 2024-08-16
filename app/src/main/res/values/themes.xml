@@ -1,0 +1,154 @@
+<resources>
+
+    <!--<style name="Theme.TechTap" parent="@style/Theme.Leanback" />-->
+
+    <style name="Theme.TechTap" parent="Theme.MaterialComponents.Light.DarkActionBar" />
+
+    <style name="Theme.TechTap.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="otpViewStyle">@style/OtpWidget.OtpView</item>-->
+    </style>
+
+
+    <style name="TextViewStyleRegular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="TextViewStyleMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="TextViewStyleSemiBold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="TextViewStyleBold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="TextViewStyleLight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_light</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="background">@drawable/rc_continue_bg</item>
+    </style>
+
+    <style name="ButtonStyleMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="background">@drawable/rc_continue_bg</item>
+    </style>
+
+    <style name="ButtonStyleBold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="background">@drawable/rc_continue_bg</item>
+    </style>
+
+
+    <style name="ButtonStyleTabSelectedMedium">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">@dimen/dp_70</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="background">@drawable/rc_selected_tab</item>
+    </style>
+    <style name="ButtonStyleTabUnSelectedMedium">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">@dimen/dp_70</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="background">@drawable/rc_see_result_bg</item>
+    </style>
+
+    <style name="TextView28">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextPolicy">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="lineHeight">30sp</item>
+    </style>
+
+    <style name="TextView20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:layout_weight">400</item>
+    </style>
+
+    <style name="btn_continue">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textFontWeight">700</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">@dimen/dp_300</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:paddingStart">@dimen/dp_25</item>
+        <item name="android:paddingEnd">@dimen/dp_25</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/dark_lilac</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <style name="RadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/rb_selector</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+</resources>

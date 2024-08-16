@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lilac">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:background="@drawable/bgc_share_with_us"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_share_with_telus"
+            style="@style/TextViewStyleBold"
+            android:layout_marginTop="@dimen/dp_50"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/share_with_telus"
+            android:textAllCaps="true"
+            android:textSize="@dimen/sp_48"
+            app:layout_constraintEnd_toStartOf="@+id/btn_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/rc_continue_bg"
+            android:onClick="@{onClickListener}"
+            android:src="@drawable/btn_close"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_share_with_telus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_share_with_telus"
+            app:layout_constraintTop_toTopOf="@+id/tv_share_with_telus" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_my_care"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_10"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_my_care_purple"
+            app:layout_constraintEnd_toEndOf="@+id/tv_share_with_telus"
+            app:layout_constraintStart_toStartOf="@+id/tv_share_with_telus"
+            app:layout_constraintTop_toBottomOf="@+id/tv_share_with_telus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_telus_mycare_allows_you"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginHorizontal="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="@string/telus_mycare_allows_you_to_book"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_my_care" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_further_integration_with_health"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginHorizontal="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/further_integration_with_health"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_telus_mycare_allows_you" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_the_following_is_example"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginHorizontal="@dimen/dp_60"
+            android:text="@string/the_following_is_example"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_further_integration_with_health" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:background="@drawable/ic_line_dotted"
+            app:layout_constraintBottom_toTopOf="@+id/tv_myVitalScan_measured_my_vitals_for"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_the_following_is_example" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_myVitalScan_measured_my_vitals_for"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_35"
+            android:text="@string/myVitalScan_measured_my_vitals_for"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_the_following_is_example" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_wellness_score"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/wellness_score"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_myVitalScan_measured_my_vitals_for" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_wellness_level"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/wellness_level"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wellness_score" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_heart_rate"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/heart_rate1"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wellness_level" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_stress_level"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/stress_level"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heart_rate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_breathing_rate"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/breathing_rate"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stress_level" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_hrv_sdnn"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/hrv_sdnn"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_breathing_rate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_prq"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/prq"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hrv_sdnn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_blood_pressure"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/blood_pressure"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_prq" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_taken"
+            style="@style/TextViewStyleRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/taken"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintStart_toStartOf="@+id/tv_telus_mycare_allows_you"
+            app:layout_constraintTop_toBottomOf="@+id/tv_blood_pressure" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
